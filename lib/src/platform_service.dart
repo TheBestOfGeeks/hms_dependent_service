@@ -1,31 +1,19 @@
+import 'package:platform_dependent_service/src/services_implementation/analytic_impl.dart';
+import 'package:platform_dependent_service/src/services_implementation/core_impl.dart';
+import 'package:platform_dependent_service/src/services_implementation/messaging_impl.dart';
+import 'package:platform_dependent_service/src/services_implementation/storage_impl.dart';
 import 'package:platform_dependent_services/platform_dependencies.dart';
 
 class PlatformService implements PlatformDependencies {
   @override
-  Analytics get analytics => GmsAnalytics();
+  Analytics get analytics => AnalyticImpl();
 
   @override
-  // TODO: implement core
-  Core get core => throw UnimplementedError();
+  Core get core => CoreImpl();
 
   @override
-  // TODO: implement messaging
-  Messaging get messaging => throw UnimplementedError();
+  Messaging get messaging => MessagingImpl();
 
   @override
-  // TODO: implement storages
-  Storages get storages => throw UnimplementedError();
-}
-
-class GmsAnalytics implements Analytics {
-  @override
-  void dispose() {
-    // TODO: implement dispose
-  }
-
-  @override
-  Future<void> init() {
-    // TODO: implement init
-    throw UnimplementedError();
-  }
+  Storage get storage => StorageImpl();
 }

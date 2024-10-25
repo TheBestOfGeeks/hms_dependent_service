@@ -3,6 +3,8 @@ description: "A new Flutter package project."
 version: 0.0.1
 homepage: "https://example.com"
 
+publish_to: none
+
 environment:
   sdk: ^3.5.3
   flutter: ">=1.17.0"
@@ -10,6 +12,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  # Huawei services
+  huawei_hmsavailability: ^6.11.0+301
+  huawei_analytics: ^6.12.0+301
+  huawei_push: ^6.12.0+300
 
   platform_dependent_services:
     git: https://github.com/TheBestOfGeeks/platform_dependent_services
